@@ -1,0 +1,66 @@
+.card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.card-icon {
+  font-size: 20px;
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-value {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.alert-card {
+  border-color: rgba(255, 59, 48, 0.3);
+  background: linear-gradient(180deg, var(--card-bg) 0%, rgba(255, 59, 48, 0.03) 100%);
+}
+
+.card-badge {
+  background-color: rgba(255, 59, 48, 0.1);
+  color: var(--danger);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
