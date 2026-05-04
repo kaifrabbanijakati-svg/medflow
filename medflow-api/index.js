@@ -12,16 +12,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/auth', authRoutes);
-app.use('/medicines', medicineRoutes);
-app.use('/sales', salesRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/medicines', medicineRoutes);
+app.use('/api/sales', salesRoutes);
 
 // Dashboard/Alerts Aggregation Route
 const auth = require('./middleware/auth');
 const Medicine = require('./models/Medicine');
 const Sale = require('./models/Sale');
 
-app.get('/dashboard', auth, async (req, res) => {
+app.get('/api/dashboard', auth, async (req, res) => {
   try {
     // Basic aggregation
     const medicines = await Medicine.find();
