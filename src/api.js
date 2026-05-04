@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  // Replace the URL below with your actual Render backend URL
-  baseURL: import.meta.env.VITE_API_URL || 'https://your-render-url-here.onrender.com',
+  // Backend URL on Render
+  baseURL: import.meta.env.VITE_API_URL || 'https://medflow-aow2.onrender.com',
 });
 
 api.interceptors.request.use((config) => {
